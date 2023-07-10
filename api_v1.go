@@ -166,13 +166,13 @@ func translateV1(text string, from string, to string) (*Translated, error) {
 	if err != nil {
 		return nil, fmt.Errorf("Error! Initial Request.")
 	}
-	request.Header.Set("sec-ch-ua", "\"Google Chrome\";v=\"95\", \"Chromium\";v=\"95\", \";Not A Brand\";v=\"99\"")
+	request.Header.Set("sec-ch-ua", "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"")
 	//request.Header.Set("x-goog-batchexecute-bgr", "[key, null,null,345,29,null,null,0,\"2\" ]")
 	request.Header.Set("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8")
 	request.Header.Set("x-same-domain", "1")
-	request.Header.Set("sec-ch-ua-mobile", "?1")
-	request.Header.Set("user-agent", "Mozilla/5.0 (Linux; Android 8.0.0; Pixel 2 XL Build/OPD1.170816.004) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Mobile Safari/537.36")
-	request.Header.Set("sec-ch-ua-platform", "\"Android\"")
+	request.Header.Set("sec-ch-ua-mobile", "?0")
+	request.Header.Set("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36")
+	request.Header.Set("sec-ch-ua-platform", "\"Windows\"")
 	request.Header.Set("accept", "*/*")
 	request.Header.Set("origin", "https://translate.google.com")
 	request.Header.Set("sec-fetch-site", "same-origin")
